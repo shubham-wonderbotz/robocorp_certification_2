@@ -1,9 +1,10 @@
-# RobotSpareBin intranet robot - starter files
+# RobotCorp Certification Level 2
 
-This robot is the starting point of Robocorp's [Beginners' course](https://robocorp.com/docs/courses/beginners-course).
 
-You can also check out the `robotsparebin-complete` robot for the finished version of the robot.
+* This robot is ordering robot from [RobotSpareBin Industires Inc.](https://robotsparebinindustries.com/#/robot-order).
 
-Click the link below to get to the code:
+* It will automatically order the robot from [Excel Sheet](https://robotsparebinindustries.com/orders.csv) and stores a screenshot of the robot and receipts in a PDF file.
 
-[tasks.robot](./tasks.robot)
+* All the receipts are store in a single .zip file
+
+* The main file is [tasks.robot](./tasks.robot)
