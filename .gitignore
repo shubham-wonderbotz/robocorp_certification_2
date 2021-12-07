@@ -9,7 +9,6 @@ temp/
 .DS_Store
 *.pyc
 *.zip
-*.pdf
 *.template
 *.xlsx
 *.log
