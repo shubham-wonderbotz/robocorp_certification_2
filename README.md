@@ -8,3 +8,5 @@
 * All the receipts are store in a single .zip file
 
 * The main file is [tasks.robot](./tasks.robot)
+
+* I have added a [sample output](./sample_output/sample_receipt.pdf)
