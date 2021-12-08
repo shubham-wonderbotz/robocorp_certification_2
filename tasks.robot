@@ -5,7 +5,7 @@ Library           RPA.HTTP
 Library           RPA.PDF
 Library           RPA.Tables
 Library           RPA.Archive
-Library           RPA.Robocloud.Secrets
+Library           RPA.Robocorp.Vault
 Library           RPA.Dialogs
 
 *** Keywords ***
@@ -16,7 +16,7 @@ Open The Website
     Click Button    OK
 
 *** Keywords ***
-Download The Excel file
+Download The Excel file by User Input
     Add heading       Please enter the link for the .csv file
     Add text          https://robotsparebinindustries.com/orders.csv
     Add text input    url
