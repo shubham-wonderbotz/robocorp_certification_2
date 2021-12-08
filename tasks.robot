@@ -82,7 +82,7 @@ ZIP archive
 *** Tasks ***
 Order Robots and store it is PDF
     Open The Website
-    Download The Excel file
+    Download The Excel file by User Input
     ${order_entries}=  Read table from CSV    orders.csv
     FOR    ${order_entry}    IN    @{order_entries}
         Fill And Submit The Form    ${order_entry}
