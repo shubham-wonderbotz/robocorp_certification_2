@@ -6,6 +6,7 @@ Library           RPA.PDF
 Library           RPA.Tables
 Library           RPA.Archive
 Library           RPA.Robocloud.Secrets
+Library           RPA.Dialogs
 
 *** Keywords ***
 Open The Website
@@ -16,7 +17,12 @@ Open The Website
 
 *** Keywords ***
 Download The Excel file
-    Download    https://robotsparebinindustries.com/orders.csv      overwrite=True
+    Add heading       Please enter the link for the .csv file
+    Add text          https://robotsparebinindustries.com/orders.csv
+    Add text input    url
+
+    ${response}=      Run dialog
+    [Return]      ${response.url}
 
 *** Keywords ***
 Fill And Submit The Form
