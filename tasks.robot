@@ -16,13 +16,13 @@ Open The Website
     Click Button    OK
 
 *** Keywords ***
-Download The Excel file by User Input
+Get The Excel file URL by User Input
     Add heading       Please enter the link for the .csv file
     Add text          https://robotsparebinindustries.com/orders.csv
-    Add text input    url
+    Add text input    URL
 
     ${response}=      Run dialog
-    [Return]      ${response.url}
+    [Return]      ${response.URL}
 
 *** Keywords ***
 Fill And Submit The Form
@@ -82,7 +82,8 @@ ZIP archive
 *** Tasks ***
 Order Robots and store it is PDF
     Open The Website
-    Download The Excel file by User Input
+    ${URL}    Get The Excel file URL by User Input
+    Download     ${URL}       overwrite=True
     ${order_entries}=  Read table from CSV    orders.csv
     FOR    ${order_entry}    IN    @{order_entries}
         Fill And Submit The Form    ${order_entry}
